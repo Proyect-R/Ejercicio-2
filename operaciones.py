@@ -60,14 +60,23 @@ def multiplicar(valor1, valor2):
         resultado += valor1
 
     #ajustar el signo del resultado
-    return -resultado if negativo else resultado
+    return -resultado if negativo else resultado  
 
 
 def dividir(dividendo, divisor):
-    if ((divisor !=0) and (isinstance(dividendo, (int, float)) and isinstance(divisor, (int, float)))):
-        cociente = 0
-        while dividendo >= divisor:
-            dividendo -= divisor
+    # Verificar que ambos parámetros sean números (int o float)
+    if not isinstance(dividendo, (int, float)) or not isinstance(divisor, (int, float)):
+        return "Error: Ambos parámetros deben ser números (enteros o decimales)"
+    
+    # Verificar que el divisor no sea 0
+    if divisor == 0:
+        return "Error: El divisor no puede ser cero"
+    
+    # Realizar la división (restando iterativamente)
+    cociente = 0
+    while dividendo >= divisor:
+        dividendo -= divisor
+
         cociente += 1
     
     return cociente, dividendo
