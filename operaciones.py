@@ -80,7 +80,32 @@ def dividir(dividendo, divisor):
         cociente += 1
     
     return cociente, dividendo
+def factorial_iterativo(n):
+    if n < 0:
+        return "El factorial no está definido para números negativos."
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        factorial = 1
+        for i in range(2, n + 1):
+            factorial *= i
+        return factorial
 
+def factorial_recursivo(n):
+   # Comprobar que es un entero
+    if not isinstance(n, int):
+        raise ValueError("El parámetro debe ser un número entero.")
+    
+    # Comprobar que no es un número negativo
+    if n < 0:
+        raise ValueError("El parámetro no puede ser un número negativo.")
+    
+    # Caso base: el factorial de 0 o 1 es 1
+    if n == 0 or n == 1:
+        return 1
+    
+    # Llamada recursiva
+    return n * factorial_recursivo(n - 1)
 
 # Función para calcular el Fibonacci de un número de forma iterativa
 def fibonacci(n):
@@ -102,3 +127,4 @@ def fibonacci(n):
         a, b = b, a + b
 
     return b
+
