@@ -74,13 +74,13 @@ elif numero == 5:
 
 elif numero == 6:
         num = int(input("Ingresa un número entero para calcular su factorial: "))
-        factorial_iterativo(num)
-        print("El factorial de {num} es {factorial_recursivo(num)}")
+        
+        print(factorial_iterativo(num))
 
 elif numero == 7:
         num = int(input("Ingresa un número entero para calcular su factorial: "))
         factorial_recursivo(num)
-        print("El factorial de {num} es {factorial_recursivo(num)}")
+        print(factorial_recursivo(num))
 
 elif numero == 8:
     num = int(input("Ingresa un número para calcular su Fibonacci: "))
