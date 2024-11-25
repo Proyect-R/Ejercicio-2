@@ -69,6 +69,6 @@ elif numero == 5:
 elif numero == 6:
         num = int(input("Ingresa un número entero para calcular su factorial: "))
 
-        print(f"El factorial de {num} es {factorial_recursivo(num)}")
+        print("El factorial de {num} es {factorial_recursivo(num)}")
 else:
         print("Opción no válida")
