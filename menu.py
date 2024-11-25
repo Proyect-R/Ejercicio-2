@@ -2,7 +2,9 @@ from operaciones import sumar
 from operaciones import restar
 from operaciones import multiplicar
 from operaciones import dividir
+from operaciones import factorial_iterativo
 from operaciones import factorial_recursivo
+from operaciones import fibonacci
 
 def mostrar_Menu():
  print ("1- sumar")   
@@ -10,8 +12,11 @@ def mostrar_Menu():
  print ("3- multiplicar")   
  print ("4- dividir")  
  print ("5- salir")   
-print ("6-Calcular el factorial de un número (recursivo)")  
+ print ("6-Calcular el factorial de un número (iterativo)")  
+ print ("7-Calcular el factorial de un número (recursivo)")
+ print ("8- Calcular el fibonacci de un número (iterativo)")
 
+        
 mostrar_Menu()
 numero = int (input("Ingresa un número"))
 
@@ -66,9 +71,20 @@ elif numero == 4:
 elif numero == 5:
        print("Saliendo...")    
 
+
 elif numero == 6:
         num = int(input("Ingresa un número entero para calcular su factorial: "))
-
+        factorial_iterativo(num)
         print("El factorial de {num} es {factorial_recursivo(num)}")
+
+elif numero == 7:
+        num = int(input("Ingresa un número entero para calcular su factorial: "))
+        factorial_recursivo(num)
+        print("El factorial de {num} es {factorial_recursivo(num)}")
+
+elif numero == 8:
+    num = int(input("Ingresa un número para calcular su Fibonacci: "))
+    print(fibonacci(num))
+
 else:
         print("Opción no válida")
