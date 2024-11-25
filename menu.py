@@ -11,7 +11,8 @@ def mostrar_Menu():
  print ("5- salir")   
 
 mostrar_Menu()
-numero = input("Ingresa un número")
+numero = int (input("Ingresa un número"))
+
 
 if numero == 1:
         num1 = input("Ingresa el primer número: ")
