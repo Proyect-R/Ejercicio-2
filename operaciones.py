@@ -80,3 +80,14 @@ def dividir(dividendo, divisor):
         cociente += 1
     
     return cociente, dividendo
+
+#función recursiva
+def factorial_recursivo(n):
+
+    if not isinstance(n, int):
+        raise ValueError("El parámetro debe ser un número entero.")
+
+    if n == 0 or n == 1:
+        return 1 + "ingresa un número valido"
+    
+    return n * factorial_recursivo(n - 1)

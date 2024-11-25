@@ -2,6 +2,7 @@ from operaciones import sumar
 from operaciones import restar
 from operaciones import multiplicar
 from operaciones import dividir
+from operaciones import factorial_recursivo
 
 def mostrar_Menu():
  print ("1- sumar")   
@@ -9,6 +10,7 @@ def mostrar_Menu():
  print ("3- multiplicar")   
  print ("4- dividir")   
  print ("5- salir")   
+ print ("6- factorial") 
 
 mostrar_Menu()
 numero = input("Ingresa un número")
@@ -61,8 +63,13 @@ elif numero == 4:
         mostrar_Menu()    
 
 elif numero == 5:
-       print("Saliendo...")    
+       print("Saliendo...")  
 
+elif numero == 6:
+       num = int(input("Ingresa el número: "))
+
+       factorial_recursivo(num)
+       mostrar_Menu()
 
 else:
         print("Opción no válida")
