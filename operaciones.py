@@ -14,10 +14,6 @@ def sumar(numero_uno, numero_dos):
     resultado = numero_uno + numero_dos
     return resultado
 
-#llamamos a la funcion 
-#y damos valor a los parametros
-    print(sumar(10, 5.5))  
-
 #Función para restar
 def restar(numero_uno, numero_dos):
  
@@ -32,10 +28,6 @@ def restar(numero_uno, numero_dos):
     #realizamos la operacion 
     resultado = numero_uno -  numero_dos
     return resultado
-
-#llamamos a la funcion 
-#y damos valor a los parametros
-    print(restar(6, 5)) 
 
  #funcion para multiplicacion
 def multiplicar(valor1, valor2):
@@ -70,6 +62,12 @@ def multiplicar(valor1, valor2):
     #ajustar el signo del resultado
     return -resultado if negativo else resultado
 
-#imprimimos y damos valor
-#a cada parametro
-print(multiplicar(5, 3))   
+
+def dividir(dividendo, divisor):
+    if ((divisor !=0) and (isinstance(dividendo, (int, float)) and isinstance(divisor, (int, float)))):
+        cociente = 0
+        while dividendo >= divisor:
+            dividendo -= divisor
+        cociente += 1
+    
+    return cociente, dividendo
