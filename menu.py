@@ -2,7 +2,7 @@ from operaciones import sumar
 from operaciones import restar
 from operaciones import multiplicar
 from operaciones import dividir
-from operaciones import factorial_recursivo
+from operaciones import factorial_iterativo
 
 def mostrar_Menu():
  print ("1- sumar")   
@@ -68,7 +68,7 @@ elif numero == 5:
 elif numero == 6:
        num = int(input("Ingresa el número: "))
 
-       factorial_recursivo(num)
+       factorial_iterativo(num)
        mostrar_Menu()
 
 else:
