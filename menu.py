@@ -2,6 +2,7 @@ from operaciones import sumar
 from operaciones import restar
 from operaciones import multiplicar
 from operaciones import dividir
+from operaciones import fibonacci
 
 def mostrar_Menu():
  print ("1- sumar")   
@@ -9,7 +10,9 @@ def mostrar_Menu():
  print ("3- multiplicar")   
  print ("4- dividir")   
  print ("5- salir")   
+ print ("8- Calcular el fibonacci de un número (iterativo)")
 
+        
 mostrar_Menu()
 numero = input("Ingresa un número")
 
@@ -62,8 +65,9 @@ elif numero == 4:
 
 elif numero == 5:
        print("Saliendo...")    
-
-
+if numero == 8:
+    num = int(input("Ingresa un número para calcular su Fibonacci: "))
+    print(fibonacci(num))
 else:
         print("Opción no válida")
         mostrar_Menu()

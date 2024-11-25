@@ -80,3 +80,25 @@ def dividir(dividendo, divisor):
         cociente += 1
     
     return cociente, dividendo
+
+
+# Función para calcular el Fibonacci de un número de forma iterativa
+def fibonacci(n):
+    # Verificamos si el número es un entero positivo
+    if not isinstance(n, int):
+        raise ValueError("El valor debe ser un entero.")
+    if n < 0:
+        raise ValueError("El número debe ser mayor o igual a 0.")
+    
+    # Caso base
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    
+    # Calculamos el Fibonacci de manera iterativa
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+
+    return b
